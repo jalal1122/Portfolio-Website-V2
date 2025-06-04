@@ -362,8 +362,7 @@ header ul a:hover {
   height: 87vh;
 }
 
-
-.card:nth-child(3) video{
+.card:nth-child(3) video {
   align-self: center;
 }
 
@@ -508,32 +507,42 @@ header ul a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100vw;
+  justify-content: center;
+  gap: 12vh;
   position: relative;
 }
 
 .skills-box {
   width: 100%;
-  height: 90vh;
   position: relative;
   display: flex;
   align-items: start;
   justify-content: center;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
   mix-blend-mode: lighten;
   opacity: 0.7;
 }
 
 .skills-image {
-  width: 70%;
+  width: 40vw;
+  height: 30vw;
+  /* object-fit: contain; */
   mix-blend-mode: difference;
+  background-image: url(./assets/images/digitalBrain.png);
+  background-position: center;
+  background-size: cover;
 }
 
 .Designer {
-  position: absolute;
+  /* position: absolute; */
   display: flex;
   flex-direction: column;
   align-items: start;
-  top: 25%;
-  left: 5%;
+  padding: 10px;
+  /* top: 25%; */
+  /* left: 5%; */
   max-width: 300px;
 }
 
@@ -543,17 +552,14 @@ header ul a:hover {
   align-items: center;
 }
 
-.Designer p {
-  line-height: 23px;
-}
-
 .coder {
-  position: absolute;
+  /* position: absolute; */
   display: flex;
   flex-direction: column;
   align-items: start;
-  top: 25%;
-  right: 5%;
+  padding: 10px;
+  /* top: 25%; */
+  /* right: 5%; */
   max-width: 300px;
 }
 
@@ -563,10 +569,6 @@ header ul a:hover {
   align-items: center;
 }
 
-.coder p {
-  line-height: 23px;
-}
-
 .coder-text {
   font-size: 50px;
 }
@@ -574,10 +576,10 @@ header ul a:hover {
 /* Slider */
 
 .slider {
-  position: absolute;
-  bottom: 5%;
-  right: 20%;
-  width: 60%;
+  /* position: absolute; */
+  /* bottom: 5%; */
+  /* right: 15%; */
+  width: 70%;
   height: var(--height);
   overflow: hidden;
   mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
@@ -588,7 +590,7 @@ header ul a:hover {
 .slider .list {
   display: flex;
   width: max-content;
-  animation: scrollX 15s linear infinite;
+  animation: scrollX 8s linear infinite;
 }
 
 .slider .item {
@@ -900,8 +902,36 @@ header ul a:hover {
     max-width: 300px;
   }
 
-  .skills-video-box {
-    right: 0%;
+  .skills-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-image {
+    width: 60vw;
+    height: 40vw;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .slider{
+    width: 95%;
+  }
+
+  .slider .list {
+    animation-duration: 10s;
+  }
+
+  .Designer {
+    max-width: 100%;
+    font-size: 25px;
+    padding: 25px;
+  }
+
+  .coder {
+    max-width: 100%;
+    font-size: 25px;
+    padding: 25px;
   }
 
   .skills-video-box video {
@@ -921,20 +951,8 @@ header ul a:hover {
     font-size: 20px;
   }
 
-  .info-cards .card:nth-child(3) h1 {
-    bottom: 25%;
-  }
-
   .card {
     height: 50vh;
-  }
-
-  .card:nth-child(1) h1 {
-    bottom: 40%;
-  }
-
-  .card:nth-child(2) h1 {
-    bottom: 35%;
   }
 
   .card video {
