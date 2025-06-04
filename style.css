@@ -351,9 +351,9 @@ header ul a:hover {
   box-shadow: 0 0 15px rgb(211, 211, 211);
 }
 
-.card:nth-child(2) img{
-    width: 60%;
-    height: 60%;
+.card:nth-child(2) img {
+  width: 60%;
+  height: 60%;
 }
 
 .card:nth-child(3) {
@@ -929,6 +929,18 @@ header ul a:hover {
     bottom: 25%;
   }
 
+  .card {
+    height: 50vh;
+  }
+
+  .card:nth-child(1) h1 {
+    bottom: 40%;
+  }
+
+  .card:nth-child(2) h1 {
+    bottom: 35%;
+  }
+
   .card video {
     height: 60%;
 
@@ -1007,7 +1019,7 @@ header ul a:hover {
   }
 
   .container {
-    height: 100%;
+    /* height: 100%; */
   }
 
   .project-vidbox video {
@@ -1153,6 +1165,14 @@ header ul a:hover {
 
   .card {
     min-height: 20rem;
+  }
+
+  .card:nth-child(1) {
+    height: 30vh;
+  }
+
+  .card:nth-child(1) h1 {
+    bottom: 40%;
   }
 
   .card h1 {
