@@ -120,6 +120,8 @@ header ul a:hover {
   margin-top: -23.5%;
 }
 
+/* Hero Section */
+
 .hero {
   position: relative;
   display: flex;
@@ -130,8 +132,9 @@ header ul a:hover {
 }
 
 .hero-info {
-  position: absolute;
-  left: 5%;
+  /* position: absolute;
+  left: 5%; */
+  padding: 20px;
 }
 
 .hero-info .hero-info-title {
@@ -200,8 +203,8 @@ header ul a:hover {
 }
 
 .skills-video-box {
-  position: absolute;
-  right: 3%;
+  /* position: absolute;
+  right: 3%; */
 }
 
 .skills-video {
@@ -237,7 +240,6 @@ header ul a:hover {
 .scroll-down::before {
   top: 30%;
   animation-delay: 0.5s;
-  /* animation: scroll-down 1s ease-in-out infinite; */
 }
 
 @keyframes scroll-down {
@@ -257,6 +259,8 @@ header ul a:hover {
   }
 }
 
+/* Info Section */
+
 .info-section {
   display: flex;
   align-items: center;
@@ -268,6 +272,7 @@ header ul a:hover {
 .section-title {
   font-size: 40px;
   font-weight: 700;
+  margin-bottom: -15px;
 }
 
 .info-cards {
@@ -281,32 +286,27 @@ header ul a:hover {
 
 .card {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   position: relative;
   width: auto;
-  height: 40vh;
+  height: 36vh;
   overflow: hidden;
   border: 1px solid gray;
   background-color: #080020b7;
   border-radius: 20px;
   transition: 0.5s;
+  padding: 15px;
 }
 
 .card h1 {
-  position: absolute;
-  margin: 0;
-  bottom: 40%;
-  left: 5%;
   font-size: 25px;
   z-index: 1;
   color: lightgray;
 }
 
 .card p {
-  position: absolute;
-  bottom: 3%;
-  left: 5%;
   z-index: 1;
   max-width: 300px;
   color: gray;
@@ -315,9 +315,10 @@ header ul a:hover {
 }
 
 .card img {
-  width: 80%;
+  width: 100%;
   height: 50%;
-  object-fit: cover;
+  object-fit: contain;
+  align-self: center;
 }
 
 .card video {
@@ -358,15 +359,12 @@ header ul a:hover {
 
 .card:nth-child(3) {
   grid-row: span 2;
-  height: 83vh;
+  height: 87vh;
 }
 
-.card:nth-child(3) p {
-  bottom: 12%;
-}
 
-.card:nth-child(3) h1 {
-  bottom: 21%;
+.card:nth-child(3) video{
+  align-self: center;
 }
 
 .card:nth-child(4) {
@@ -377,9 +375,7 @@ header ul a:hover {
   max-width: 650px;
 }
 
-.card:nth-child(4) h1 {
-  bottom: 35%;
-}
+/* Projects Setion */
 
 .my-project {
   display: flex;
@@ -891,7 +887,7 @@ header ul a:hover {
 
 @media screen and (max-width: 1200px) {
   .blackhole-box video {
-    margin-top: -20%;
+    margin-top: -23%;
   }
 
   .hero-info h1 {
@@ -1111,6 +1107,13 @@ header ul a:hover {
 
   .social-box {
     margin-left: -90px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .blackhole-box video {
+    width: 100%;
+    margin-top: -20%;
   }
 }
 
