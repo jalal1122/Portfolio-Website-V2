@@ -33,13 +33,14 @@ html {
 
 header {
   display: flex;
+  width: 100%;
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   align-items: center;
   justify-content: space-between;
-  padding: 0 30px;
+  /* padding: 0 30px; */
   height: 70px;
   background-color: rgba(255, 255, 255, 0.121);
   backdrop-filter: blur(5px);
@@ -87,6 +88,7 @@ header ul a:hover {
 .box-icons {
   display: flex;
   gap: 40px;
+  padding: 0 20px;
 }
 
 .box-icons p {
@@ -137,7 +139,7 @@ header ul a:hover {
 .hero-info {
   /* position: absolute;
   left: 5%; */
-  padding: 20px;
+  padding: 20px 40px;
 }
 
 .hero-info .hero-info-title {
@@ -328,9 +330,9 @@ header ul a:hover {
 }
 
 .card button {
-  position: absolute;
+  /* position: absolute;
   bottom: 5%;
-  left: 5%;
+  left: 5%; */
   padding: 10px 25px;
   border: 1px solid gray;
   background-color: #0f1217;
@@ -629,24 +631,32 @@ header ul a:hover {
 /* CONTACT SECTION */
 
 .contact-section {
-  width: 80%;
-  height: 100vh;
+  width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 10%;
+  gap: 40px;
   align-items: center;
   position: relative;
 }
 
+.form-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
 .contact-section h1 {
-  position: absolute;
+  /* position: absolute;
   top: 10%;
-  left: 40%;
+  left: 40%; */
 }
 
 .social-box {
   display: flex;
   flex-direction: column;
+  padding: 20px;
   gap: 25px;
 }
 
@@ -666,6 +676,10 @@ header ul a:hover {
 .social-icons a i {
   color: white;
   margin-top: 40px;
+}
+
+.contact-box {
+  padding: 20px;
 }
 
 .contact-box p {
@@ -704,15 +718,20 @@ header ul a:hover {
 
 .footer {
   display: flex;
-  justify-content: space-between;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  justify-content: space-around;
+  width: 100%;
   height: 70px;
   background-color: rgba(255, 255, 255, 0.121);
   z-index: 999;
-  padding: 0 3rem;
+}
+
+footer h1 {
+  padding: 0 20px;
+  font-size: 25px;
+}
+
+footer .box-icons {
+  padding: 0 20px;
 }
 
 /* BLUR EFFECT ANIMAION */
@@ -782,6 +801,8 @@ header ul a:hover {
 
 .menu-icon {
   font-size: 35px;
+  width: 60px;
+  margin-right: 10px;
   cursor: pointer;
   display: none;
 }
@@ -924,13 +945,13 @@ header ul a:hover {
   .Designer {
     max-width: 100%;
     font-size: 25px;
-    padding: 25px;
+    margin: 25px;
   }
 
   .coder {
     max-width: 100%;
     font-size: 25px;
-    padding: 25px;
+    margin: 25px;
   }
 
   .skills-video-box video {
@@ -943,7 +964,7 @@ header ul a:hover {
 
   .card:nth-child(3) {
     grid-column: span 2;
-    height: 70vh;
+    /* height: 70vh; */
   }
 
   .info-cards .card h1 {
@@ -956,7 +977,6 @@ header ul a:hover {
 
   .card video {
     height: 60%;
-
     margin-top: 5%;
   }
 
@@ -965,16 +985,53 @@ header ul a:hover {
     scale: 0.8;
   }
 
-  .contact-section .section-title {
-    left: 30%;
+  .form-div {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .hero {
+    /* justify-content: flex-end; */
+    align-items: flex-end;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .blackhole-box video {
+    width: 100%;
+    margin-top: -20%;
+  }
+
+  .form-div {
+    justify-content: space-between;
+  }
+
+  .box-icons {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-info h1 {
+    font-size: 33px;
+    margin: 20px 0;
+  }
+
+  .hero-info p {
+    /* max-width: 300px; */
+    font-size: 15px;
+    margin: 20px 0;
   }
 }
 
 @media screen and (max-width: 700px) {
   header {
-    position: fixed;
+    /* position: fixed; */
     height: 50px;
-    width: 100vw;
+    /* width: 100%; */
+    padding: 0;
   }
 
   header ul {
@@ -986,12 +1043,25 @@ header ul a:hover {
   }
 
   .menu-icon {
-    display: inline;
+    display: block;
+  }
+
+  .hero-info {
+    padding: 0 0 0 20px;
+    max-width: 250px;
   }
 
   .blackhole-box video {
     width: 100%;
-    margin-top: -15%;
+    margin-top: -20%;
+  }
+
+  .skills-video-box {
+    width: 50%;
+  }
+
+  .skills-video {
+    width: 100%;
   }
 
   .autoBlur {
@@ -999,19 +1069,11 @@ header ul a:hover {
   }
 
   .hero {
-    flex-direction: column;
-  }
-  .hero-info {
-    bottom: 5%;
+    align-items: center;
   }
 
   .scroll-down {
     bottom: 5%;
-  }
-
-  .hero .skills-video-box {
-    height: 200px;
-    top: 5%;
   }
 
   .info-cards {
@@ -1020,69 +1082,59 @@ header ul a:hover {
 
   .card:nth-child(3) {
     grid-column: span 2;
-    height: 70vh;
   }
 
   .card video {
     width: 100%;
   }
 
-  .container {
-    /* height: 100%; */
+  .my-project {
+    width: 100%;
+    gap: 40px;
+    height: max-content;
   }
 
   .project-vidbox video {
-    width: 250px;
-    margin-left: -100px;
+    width: 400px;
   }
 
   .project-info {
-    overflow: hidden;
+    /* overflow: hidden; */
     padding-left: 0;
-    margin-left: -50px;
+    width: 400px;
+    /* width: max-content; */
+    /* align-items: center; */
+    justify-content: flex-start;
   }
 
   .project-info h1 {
-    font-size: 20px;
-    max-width: 200px;
+    font-size: 30px;
+    max-width: 400px;
     text-wrap: wrap;
   }
 
   .project-info p {
-    font-size: 10px;
+    font-size: 16px;
     text-wrap: wrap;
-    max-width: 200px;
-    min-width: 0;
+    max-width: 400px;
+    margin-bottom: 20px;
   }
 
   .project-info button {
     padding: 5px 10px;
   }
 
-  .my-project {
-    margin-bottom: 600px;
-  }
-
   .project-card {
     flex-direction: column;
-    margin-left: 25%;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    /* margin-left: 25%; */
     gap: 30px;
   }
 
   .project-vidbox {
     min-width: 200px;
-  }
-
-  .project-info {
-    width: 85%;
-  }
-
-  .project-info h1 {
-    text-wrap: nowrap;
-  }
-
-  .project-info p {
-    max-width: 300px;
   }
 
   .Designer {
@@ -1114,19 +1166,22 @@ header ul a:hover {
     margin-bottom: 50px;
   }
 
+  .form-div {
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+  }
+
   .footer {
     font-size: 10px;
   }
 
+  .footer h1 {
+    font-size: 20px;
+  }
+
   .social-box {
     margin-left: -90px;
-  }
-}
-
-@media screen and (max-width: 980px) {
-  .blackhole-box video {
-    width: 100%;
-    margin-top: -20%;
   }
 }
 
@@ -1196,43 +1251,75 @@ header ul a:hover {
     font-size: 5px;
   }
 
-  .project-card {
-    height: 50%;
+  .my-project {
+    width: 100%;
+    height: fit-content;
   }
 
-  .project-info p {
-    margin-bottom: 15px;
+  .section-title {
+    font-size: 30px;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .project-vidbox {
+    width: 100%;
+    min-width: 300px;
+    height: 300px;
+    position: relative;
+  }
+
+  .project-vidbox video {
+    width: 100%;
   }
 
   .project-info {
-    margin-left: -80px;
+    width: 100%;
   }
 
   .skills-box {
-    height: 120vh;
-    margin-right: 30px;
+    /* height: 120vh; */
+    /* margin-right: 30px; */
+  }
+
+  .Designer{
+    margin: 10px;
+  }
+
+  .coder{
+    margin: 10px;
   }
 
   .slider {
     bottom: 0%;
   }
 
+  .slider .item {
+    width: 50px;
+  }
+
+  .form-div {
+    /* flex-direction: column; */
+    align-items: center;
+    width: 100%;
+  }
+
+  .social-box {
+    margin: 20px;
+  }
+
   .contact-section {
-    scale: 0.9;
-    height: 120vh;
   }
 
   .contact-section .section-title {
-    top: -30px;
-    left: 25%;
   }
 
   .footer {
-    padding: 15px;
-  }
-
-  .footer h1 {
-    max-width: 150px;
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
   }
 
   .footer .box-icons {
