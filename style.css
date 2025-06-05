@@ -10,6 +10,11 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .container {
   position: relative;
   width: 100%;
@@ -1261,11 +1266,11 @@ footer .box-icons {
     width: 100%;
   }
 
-  .Designer{
+  .Designer {
     margin: 10px;
   }
 
-  .coder{
+  .coder {
     margin: 10px;
   }
 
