@@ -46,9 +46,21 @@
         </ul>
 
         <div class="box-icons">
-          <p><i class="fa-brands fa-instagram"></i></p>
-          <p><i class="bx bxl-github"></i></p>
-          <p><i class="bx bxl-linkedin-square"></i></p>
+          <p>
+            <a href="https://www.instagram.com/jalalkhan2084/"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </p>
+          <p>
+            <a href="https://github.com/jalal1122"
+              ><i class="bx bxl-github"></i
+            ></a>
+          </p>
+          <p>
+            <a href="https://www.linkedin.com/in/mjdevstudio/"
+              ><i class="bx bxl-linkedin-square"></i
+            ></a>
+          </p>
         </div>
 
         <div class="menu-icon">
@@ -196,7 +208,9 @@
               and enhance their knowledge through interactive courses and
               tutorials.
             </p>
-            <button><i class="bx bx-link-external"></i> Website</button>
+            <button id="skillSprintProject">
+              <i class="bx bx-link-external"></i> Website
+            </button>
           </div>
         </div>
 
@@ -215,7 +229,9 @@
               discover and explore various career paths based on their skills,
               interests, and goals.
             </p>
-            <button><i class="bx bx-link-external"></i> Website</button>
+            <button id="careerPathFinderProject">
+              <i class="bx bx-link-external"></i> Website
+            </button>
           </div>
         </div>
 
@@ -235,7 +251,9 @@
               shopping experience with a wide range of products, user-friendly
               interface, and many more.
             </p>
-            <button><i class="bx bx-link-external"></i> Website</button>
+            <button id="shopCoProject">
+              <i class="bx bx-link-external"></i> Website
+            </button>
           </div>
         </div>
       </section>
@@ -317,20 +335,32 @@
       </section>
 
       <!-- Contact Section -->
-      <section class="contact-section">
+      <section class="contact-section" id="contact-section">
         <h1 class="section-title autoDisplay">Let"s talk😊</h1>
 
         <div class="form-div">
           <div class="social-box autoBlur">
-            <a href="#"><i class="bx bxs-phone"></i> +39 111 222 444</a>
-            <a href="#"><i class="bx bxl-telegram"></i> Contact Example.com</a>
-            <a href="#"
-              ><i class="bx bxl-linkedin-square"></i> Contact Example.com</a
+            <a
+              href="https://api.whatsapp.com/send?phone=923158670180"
+              target="_blank"
+              ><i class="bx bxs-phone"></i> +92 3158670180</a
+            >
+            <a href="mailto:jk4350649@gmail.com"
+              ><i class="bx bxl-telegram"></i> jk4350649@gmail.com</a
+            >
+            <a href="https://www.linkedin.com/in/mjdevstudio/" target="_blank"
+              ><i class="bx bxl-linkedin-square"></i> Linkedin Profile</a
             >
             <div class="social-icons">
-              <a href="#"><i class="bx bxl-youtube"></i></a>
-              <a href="#"><i class="bx bxl-twitter"></i></a>
-              <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+              <a href="https://www.instagram.com/jalalkhan2084/" target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="https://www.github.com/jalal1122" target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="https://www.linkedin.com/in/mjdevstudio/" target="_blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
             </div>
           </div>
 
@@ -342,15 +372,20 @@
             </p>
 
             <p>Full Name</p>
-            <input placeholder="Your Full name" type="full name" />
+            <input
+              placeholder="Your Full name"
+              id="fullName"
+              type="full name"
+            />
 
             <p>Email Address</p>
-            <input placeholder="Your Email" type="Contact" />
+            <input placeholder="Your Email" id="email" type="email" />
 
             <p>Your Message</p>
             <input
               class="input-message"
               type="contact"
+              id="message"
               placeholder="shaire your thoughts..."
             />
 
@@ -359,17 +394,56 @@
         </div>
       </section>
 
+      <!-- PopUps -->
+      <div class="success-popup">
+        <div class="popup-content">
+          <h1>Message Sent Successfully!</h1>
+          <p>Thank you for reaching out. I will get back to you soon.</p>
+        </div>
+      </div>
+      <div class="failed-popup">
+        <div class="popup-content">
+          <h1>Message Failed to Send!</h1>
+          <p>
+            There was an error sending your message. Please try again later.
+          </p>
+        </div>
+      </div>
+
       <!-- Footer -->
       <footer class="footer">
         <h1>©️2025, Made by Muhammad Jalal</h1>
         <div class="box-icons">
-          <p><i class="bx bxl-youtube"></i></p>
-          <p><i class="bx bxl-github"></i></p>
-          <p><i class="bx bxl-linkedin-square"></i></p>
+          <p>
+            <a href="https://www.instagram.com/jalalkhan2084/"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </p>
+          <p>
+            <a href="https://www.github.com/jalal1122"
+              ><i class="bx bxl-github"></i
+            ></a>
+          </p>
+          <p>
+            <a href="https://www.linkedin.com/in/mjdevstudio/"
+              ><i class="bx bxl-linkedin-square"></i
+            ></a>
+          </p>
         </div>
       </footer>
     </div>
     <script src="app.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "YOUR_PUBLIC_KEY",
+        });
+      })();
+    </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
