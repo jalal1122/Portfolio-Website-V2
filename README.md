@@ -6,7 +6,7 @@ A modern, fully responsive portfolio website designed to showcase your skills, p
 
 🔗 [View Live Demo](https://mjportfoliov2.vercel.app/)
 
-![MJDev Studio Screenshot](./assets/images/figureHead.png)
+![MJDev Studio Screenshot](./heross.png)
 
 ---
 
